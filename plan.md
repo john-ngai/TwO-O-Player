@@ -18,8 +18,10 @@ Read the description above again and extract / write down the nouns that you fee
 
 #### Answer:
 
-* Players class
 * Games class
+* Players class
+* Questions class
+<!-- * Answers class -->
 
 ### Task 2: Write their roles
 
@@ -35,7 +37,29 @@ Remember that objects are important for two things:
     * Players class:
       * initialize(name), decrease_lives,
     * Games class:
-      * start, select_first-player, select_next-player, num_generator, check_answer, check_winner
+      * start, select_first-player, select_next-player, check_winner
+    * Questions class:  
+      num_generator, check_answer
+
+
+Psuedocode:
+1. start method
+2. select_first-player method
+3. while player1.lives > 0 && player2.lives > 0 loop
+    generate num 1 & num 2
+    ask the question num 1 * num 2
+
+    get_answer $stdin.gets.chomp
+    check_answer true/false
+
+    if false then, decrease_lives
+
+    select_next_player, if p1 > p2 or p2 > p1
+    end of loop
+
+    check_winner, return the player with > 0 lives
+
+    puts "player.name is the winner!!"
 
 
 Write down the methods for each class while also speaking to the following points:
