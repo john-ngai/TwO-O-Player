@@ -18,66 +18,63 @@ Read the description above again and extract / write down the nouns that you fee
 
 #### Answer:
 
-* Games class
-* Players class
-* Questions class
-<!-- * Answers class -->
+- Games class
+- Players class
+- Questions class
 
 ### Task 2: Write their roles
 
 Write out a brief paragraph describing the role that class will play in your app.
 
 Remember that objects are important for two things:
-1. State: Storing data describing themselves (variables)
-    * Players class
-      * @NAME, @lives
-    * Games class
-      * @PLAYER1, @PLAYER2, @question, @num1, @num2, @answer, @player_turn
-2. Behavior: Defining actions that can be performed on them (methods)
-    * Players class:
-      * initialize(name), decrease_lives,
-    * Games class:
-      * start, select_first-player, select_next-player, check_winner
-    * Questions class:  
-      num_generator, check_answer
 
+1. State: Storing data describing themselves (variables)
+   - Players class
+     - @NAME, @lives
+   - Games class
+     - @PLAYER1, @PLAYER2, @question, @num1, @num2, @answer, @player_turn
+2. Behavior: Defining actions that can be performed on them (methods)
+   - Players class:
+     - initialize(name), decrease_lives,
+   - Games class:
+     - start, select_first-player, select_next-player, check_winner
+   - Questions class:  
+     num_generator, check_answer
 
 Psuedocode:
+
 1. start method
 2. select_first-player method
 3. while player1.lives > 0 && player2.lives > 0 loop
-    generate num 1 & num 2
-    ask the question num 1 * num 2
+   generate num 1 & num 2
+   ask the question num 1 \* num 2
 
-    get_answer $stdin.gets.chomp
-    check_answer true/false
+   get_answer $stdin.gets.chomp
+   check_answer true/false
 
-    if false then, decrease_lives
+   if false then, decrease_lives
 
-    select_next_player, if p1 > p2 or p2 > p1
-    end of loop
+   select_next_player, if p1 > p2 or p2 > p1
+   end of loop
 
-    check_winner, return the player with > 0 lives
+   check_winner, return the player with > 0 lives
 
-    puts "player.name is the winner!!"
-
+   puts "player.name is the winner!!"
 
 Write down the methods for each class while also speaking to the following points:
 
-* What information is relevant to each class?
-* What will they need in order to be initialized?
-* What public methods will be defined on them?
+- What information is relevant to each class?
+- What will they need in order to be initialized?
+- What public methods will be defined on them?
 
 Furthermore:
 
-* Which class will contain the game loop (where each instance of the loop is the other players turn)?
-  * Answer: Games class
-* Which class should manage who the current_player is?
-  * Answer: Games class
-* Which class(es) will contain user I/O and which will not have any?
-  * Answers: Players won't have the I/O, but the Games will.
-
-
+- Which class will contain the game loop (where each instance of the loop is the other players turn)?
+  - Answer: Games class
+- Which class should manage who the current_player is?
+  - Answer: Games class
+- Which class(es) will contain user I/O and which will not have any?
+  - Answers: Players won't have the I/O, but the Games will.
 
 ### Task 3: Peer & Mentor Review
 
